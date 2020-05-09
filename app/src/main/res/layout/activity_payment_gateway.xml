@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.student.fees.PaymentGatewayActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fees_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/amount"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/invoice_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin25"
+        android:background="@drawable/border_layout"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/invoice"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size18"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/margin5"
+            android:background="@color/view_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DATE"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/invoice_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CUSTOMER ID"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/invoice_customer_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ORDER ID"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/invoice_order_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TRANSACTION ID"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/invoice_transaction_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BANK NAME"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/invoice_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PAID AGAINST"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/invoice_paid_against"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CURRENCY"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/invoice_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FEES AMOUNT"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/invoice_total_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FINE"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/invoice_fine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DISCOUNT"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/invoice_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_margin="@dimen/margin10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AMOUNT PAID"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/invoice_amount_paid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/margin5"
+            android:background="@color/view_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/share"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:onClick="shareClick"
+                android:background="@drawable/border_layout"
+                android:layout_margin="@dimen/margin10"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:onClick="saveClick"
+                android:background="@drawable/border_layout"
+                android:layout_margin="@dimen/margin10"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/pay_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pay"
+        android:onClick="payNowClick"
+        android:layout_gravity="center|bottom"/>
+
+</LinearLayout>

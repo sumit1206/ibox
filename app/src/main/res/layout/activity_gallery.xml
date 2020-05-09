@@ -1,0 +1,29 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.gallery.Gallery">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/gallery_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gallery_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="6"
+        tools:listitem="@layout/custom_gallery_item">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@color/white"
+    android:layout_height="fill_parent"
+    tools:context=".ui.student.library.LibraryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/library_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color">
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- AppBar Layout   -->
+    <RelativeLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginStart="@dimen/margin50"
+        android:layout_marginEnd="@dimen/margin50"
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_marginBottom="@dimen/margin10"
+        android:background="@drawable/round_button">
+        <!-- Tab Layout for creating tabs -->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:clipToPadding="false"
+            android:background="@null">
+
+            <View
+                android:id="@+id/indicator"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/round_button"
+                android:backgroundTint="#FFC107"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/white"
+                app:tabIndicatorColor="@null"
+                app:tabRippleColor="@null"/>
+        </FrameLayout>
+    </RelativeLayout>
+    <!-- Helps handing the Fragments for each Tab -->
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/libraryViewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</LinearLayout>

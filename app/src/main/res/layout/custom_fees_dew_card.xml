@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin5"
+    app:cardCornerRadius="@dimen/margin10"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:elevation="@dimen/margin5">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="@dimen/margin5">
+
+    <View
+        android:id="@+id/view_line_color"
+        android:layout_width="@dimen/margin5"
+        android:layout_height="match_parent"
+        android:background="@color/toolbar_color"/>
+
+    <LinearLayout
+        android:id="@+id/fees_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:paddingStart="@dimen/margin10"
+        android:padding="@dimen/margin5"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fees_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="exam fees"
+            android:textSize="@dimen/text_size18"
+            android:gravity="start|center"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/margin5"/>
+
+        <TextView
+            android:id="@+id/dew_fees_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1000"
+            android:textSize="@dimen/text_size16"
+            android:paddingTop="@dimen/margin5"
+            android:textColor="@color/text_light" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/margin3"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/submission_date"
+            android:padding="@dimen/margin3"
+            android:textSize="@dimen/text_size14"
+            android:paddingTop="@dimen/margin5"
+            android:textColor="@color/text_light"
+            android:gravity="start"
+            android:layout_gravity="center" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/text_light"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin3"
+                android:layout_marginBottom="@dimen/margin3"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin10"/>
+            <TextView
+                android:id="@+id/fees_payment_last_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 jun 20"
+                android:padding="@dimen/margin3"
+                android:textSize="@dimen/text_size14"
+                android:paddingTop="@dimen/margin5"
+                android:paddingStart="@dimen/margin10"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/fees_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/margin10"
+        android:background="@drawable/round_button"/>
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>

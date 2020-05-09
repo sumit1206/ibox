@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teacher_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.sumit.ibox.ui.teacher.TeacherDashboardFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/teacher_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_schedule"
+        android:name="com.sumit.ibox.ui.teacher.teacher_schedule.TeacherRoutineFragment"
+        android:label="@string/title_schedule"
+        tools:layout="@layout/fragment_teacher_routine" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.sumit.ibox.ui.teacher.TeacherProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_teacher_profile" />
+</navigation>

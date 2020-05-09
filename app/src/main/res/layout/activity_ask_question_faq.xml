@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.faq.AskQuestionFaq">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_ask_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin10"
+        android:layout_marginEnd="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@drawable/edit_text_bg"
+        android:backgroundTint="@color/edit_text_bg_color"
+        android:padding="@dimen/margin10">
+
+    <EditText
+        android:id="@+id/ask_question_question"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/margin5"
+        android:layout_marginEnd="@dimen/margin5"
+        android:hint="Type your question"
+        android:background="@null"
+        android:maxLines="3"
+        android:gravity="start|center"
+        android:textColor="@color/text_light"
+        android:inputType="text"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/margin_100"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/ask_question_submit"
+        android:layout_width="150dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/text_size16"
+        android:layout_marginTop="@dimen/padding10"
+        android:layout_height="@dimen/margin50"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:textColor="@color/white"
+        android:text="submit"
+        android:textAllCaps="true"
+        android:onClick="submitClicked"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:lineSpacingExtra="@dimen/padding10"
+        android:layout_marginEnd="@dimen/margin5"
+        android:layout_marginStart="@dimen/margin5"
+        android:text="@string/faq_question_tips"/>
+</LinearLayout>

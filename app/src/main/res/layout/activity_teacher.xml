@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.teacher.StudentsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/teacher_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color">
+    </androidx.appcompat.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/teachers_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="3"
+        tools:listitem="@layout/custom_teacher_card"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@color/white"/>
+
+</LinearLayout>

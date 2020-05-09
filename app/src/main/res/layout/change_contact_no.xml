@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.changenumber.ChangeContactNo">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color">
+    </androidx.appcompat.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <EditText
+                android:id="@+id/change_contact_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableStart="@drawable/local_phone_black"
+                android:drawablePadding="@dimen/margin10"
+                android:drawableTint="@color/text_light"
+                android:textSize="@dimen/text_size16"
+                android:padding="@dimen/margin10"
+                android:backgroundTint="@color/edit_text_bg_color"
+                android:hint="@string/change_mobile_no"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="@dimen/image40"
+            android:background="@drawable/round_button"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin10"
+            android:text="@string/save"
+            android:textSize="@dimen/text_size16"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/toolbar_color"
+            android:onClick="savePressed"/>
+    </LinearLayout>
+</LinearLayout>

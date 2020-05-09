@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.teacher.AcademicsUpload">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/upload_homework_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin10"
+        android:layout_marginEnd="@dimen/margin10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hw_type"
+                android:textSize="@dimen/text_size16"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:id="@+id/academics_type"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@drawable/round_grey_background"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/academics_items"/>
+        </LinearLayout>
+
+// home work layout
+        <LinearLayout
+            android:id="@+id/academics_homework_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textSize="@dimen/text_size16"
+                android:layout_marginTop="@dimen/margin10"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/homework_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="bottom"
+                android:background="@drawable/round_grey_background"
+                android:padding="@dimen/margin10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size16"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textSize="@dimen/text_size16"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin10"/>
+
+            <EditText
+                android:id="@+id/homework_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:textColor="@color/black"
+                android:gravity="bottom"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@drawable/round_grey_background"
+                android:padding="@dimen/margin10"
+                android:textSize="@dimen/text_size16"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/margin10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+
+                    android:paddingEnd="@dimen/margin5">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/st_class"
+                        android:textSize="@dimen/text_size16"
+                        android:textColor="@color/black"/>
+
+                <Spinner
+                    android:id="@+id/homework_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:elevation="@dimen/margin5"
+                    android:background="@drawable/round_grey_background"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:paddingStart="@dimen/margin5">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/div"
+                        android:textSize="@dimen/text_size16"
+                        android:textColor="@color/black"/>
+
+                    <Spinner
+                        android:id="@+id/homework_division"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:elevation="@dimen/margin5"
+                        android:background="@drawable/round_grey_background"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@null">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin10">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/margin10"
+                        android:layout_marginEnd="@dimen/margin5"
+                        android:background="@drawable/grey_border"
+                        android:backgroundTint="#DDE3EF">
+
+                    <LinearLayout
+                        android:id="@+id/homework_last_date_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:background="@drawable/edit_text_bg"
+                                android:backgroundTint="#E91E63">
+
+                                <TextView
+                                    android:id="@+id/homework_last_date"
+                                    android:layout_width="@dimen/image40"
+                                    android:layout_height="@dimen/image40"
+                                    android:background="@drawable/round_button"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:textSize="@dimen/text_size18"/>
+
+                                <TextView
+                                    android:id="@+id/homework_last_month_year"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_marginTop="@dimen/margin5"
+                                    android:textSize="@dimen/text_size16"
+                                    android:textColor="@color/white"/>
+
+                            </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:padding="@dimen/margin5"
+                            android:text="@string/submission_date"
+                            android:gravity="center"
+                            android:textSize="@dimen/text_size16"/>
+                    </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/margin10"
+                        android:layout_marginStart="@dimen/margin5"
+                        android:background="@drawable/round_grey_background"
+                        android:backgroundTint="#DDE3EF">
+
+                    <LinearLayout
+                        android:id="@+id/homework_image_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:backgroundTint="#FFEB3B"
+                            android:id="@+id/second_image">
+
+                            <ImageView
+                                android:id="@+id/homework_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:scaleType="fitXY" />
+                            <View
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/add_a_photo_black"
+                                android:backgroundTint="@color/black">
+                            </View>
+                        </FrameLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="@string/add_image"
+                            android:gravity="center"
+                            android:padding="@dimen/margin5"
+                            android:textSize="@dimen/text_size16"/>
+                    </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        //note addition
+        <LinearLayout
+            android:id="@+id/academics_notes_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textSize="@dimen/text_size16"
+                android:layout_marginTop="@dimen/margin10"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="bottom"
+                android:background="@drawable/round_grey_background"
+                android:padding="@dimen/margin10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size16"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:textSize="@dimen/text_size16"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin10"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:textColor="@color/black"
+                android:gravity="bottom"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@drawable/round_grey_background"
+                android:padding="@dimen/margin10"
+                android:textSize="@dimen/text_size16"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/margin10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:paddingStart="@dimen/margin5"
+                    android:paddingEnd="@dimen/margin5">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/st_class"
+                        android:textSize="@dimen/text_size16"
+                        android:textColor="@color/black"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:elevation="@dimen/margin5"
+                        android:background="@drawable/round_grey_background"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:paddingStart="@dimen/margin5"
+                    android:paddingEnd="@dimen/margin5">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/div"
+                        android:textSize="@dimen/text_size16"
+                        android:textColor="@color/black"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:elevation="@dimen/margin5"
+                        android:background="@drawable/round_grey_background"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@null">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin10">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/margin10"
+                        android:layout_marginStart="@dimen/margin5"
+                        android:background="@drawable/round_grey_background"
+                        android:backgroundTint="#DDE3EF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:background="@drawable/edit_text_bg"
+                                android:backgroundTint="#FFEB3B">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"
+                                    android:scaleType="fitXY" />
+                                <View
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/attachment_black"
+                                    android:backgroundTint="@color/black">
+                                </View>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/add_image"
+                                android:gravity="center"
+                                android:padding="@dimen/margin5"
+                                android:textSize="@dimen/text_size16"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        //syllabus addition
+        <LinearLayout
+            android:id="@+id/academics_syllabus_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/exam_name"
+                android:textSize="@dimen/text_size16"
+                android:layout_marginTop="@dimen/margin10"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/syllabus_exam_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/exam_name"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="bottom"
+                android:background="@drawable/round_grey_background"
+                android:padding="@dimen/margin10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size16"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subject"
+                android:textSize="@dimen/text_size16"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin10"/>
+
+            <EditText
+                android:id="@+id/syllabus_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/subject"
+                android:textColor="@color/black"
+                android:gravity="bottom"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@drawable/round_grey_background"
+                android:padding="@dimen/margin10"
+                android:textSize="@dimen/text_size16"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/margin10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:paddingStart="@dimen/margin5"
+                    android:paddingEnd="@dimen/margin5">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/st_class"
+                        android:textSize="@dimen/text_size16"
+                        android:textColor="@color/black"/>
+
+                    <Spinner
+                        android:id="@+id/syllabus_class_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:elevation="@dimen/margin5"
+                        android:background="@drawable/round_grey_background"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:paddingStart="@dimen/margin5"
+                    android:paddingEnd="@dimen/margin5">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/div"
+                        android:textSize="@dimen/text_size16"
+                        android:textColor="@color/black"/>
+
+                    <Spinner
+                        android:id="@+id/syllabus_division_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:elevation="@dimen/margin5"
+                        android:background="@drawable/round_grey_background"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@null">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin10">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/margin10"
+                        android:layout_marginStart="@dimen/margin5"
+                        android:background="@drawable/round_grey_background"
+                        android:backgroundTint="#DDE3EF">
+
+                        <LinearLayout
+                            android:id="@+id/add_syllabus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="@drawable/edit_text_bg"
+                                android:backgroundTint="#FFEB3B">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:scaleType="fitXY" />
+                                <View
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/attachment_black"
+                                    android:backgroundTint="#343030">
+                                </View>
+
+                                <TextView
+                                    android:id="@+id/syllabus_file_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/text_size12"
+                                    android:textColor="@color/black"
+                                    android:padding="5dp"
+                                    android:layout_marginBottom="@dimen/margin5"
+                                    android:maxLines="1">
+                                </TextView>
+                            </FrameLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/add_file"
+                                android:gravity="center"
+                                android:padding="@dimen/margin5"
+                                android:textSize="@dimen/text_size16"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:text="@string/save"
+            android:textSize="@dimen/text_size16"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/round_button"
+            android:padding="@dimen/margin10"
+            android:onClick="submitClicked"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

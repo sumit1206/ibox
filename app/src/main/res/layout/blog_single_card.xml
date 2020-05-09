@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="250dp"
+    android:padding="@dimen/margin10"
+    android:layout_margin="@dimen/margin5"
+    android:layout_marginRight="@dimen/margin10"
+    android:elevation="@dimen/margin3"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/image40"
+            android:layout_height="@dimen/image40"
+            android:background="@drawable/avater">
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin10"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/blogUploaderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="@string/ibox"
+                android:maxLines="1"
+                android:layout_gravity="center"
+                android:textSize="@dimen/text_size16"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/blog_posted_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20 JUN 20"
+                android:textSize="@dimen/text_size12"
+                android:textColor="@color/text_light"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin5">
+
+            <TextView
+                android:id="@+id/blog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingEnd="@dimen/margin5"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size14"
+                android:textColor="@color/text_light"/>
+
+        <ImageView
+            android:id="@+id/thumbnail_blog"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="@dimen/margin5" />
+    </LinearLayout>
+</LinearLayout>

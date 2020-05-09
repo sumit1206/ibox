@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/margin5"
+        android:layout_marginTop="@dimen/margin5"
+        android:layout_marginEnd="@dimen/margin10"
+        android:layout_marginStart="@dimen/margin10"
+        android:layout_marginBottom="@dimen/margin5"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:elevation="@dimen/margin5">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/margin5">
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/margin5">
+
+            <TextView
+                android:id="@+id/hw_icon"
+                android:layout_width="@dimen/image40"
+                android:layout_height="@dimen/image40"
+                android:maxLength="1"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_gravity="center"
+                android:background="@drawable/round_button"
+                android:textSize="@dimen/margin25"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:id="@+id/homework_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:paddingTop="@dimen/margin5"
+                android:paddingBottom="@dimen/margin5"
+                android:paddingStart="@dimen/margin10"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/homework_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/title"
+                    android:textSize="@dimen/text_size18"
+                    android:layout_weight="1"
+                    android:textColor="#0A9989" />
+
+                <TextView
+                    android:id="@+id/homework_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/note"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/text_size14"
+                    android:textColor="@color/text_light"
+                    android:gravity="start"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/teacher_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Teacher name"
+                        android:maxLines="1"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/text_size14" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/text_light"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin3"
+                        android:layout_marginBottom="@dimen/margin3"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginEnd="@dimen/margin10"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20 jun 20"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:textSize="@dimen/text_size14"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/text_light"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin3"
+                        android:layout_marginBottom="@dimen/margin3"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginEnd="@dimen/margin10"/>
+
+                    <TextView
+                        android:id="@+id/homework_publish_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20 jun 20"
+                        android:padding="@dimen/margin3"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/text_size14"
+                        android:paddingTop="@dimen/margin5" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/file_download"
+                android:background="@drawable/round_button"
+                android:layout_gravity="center"
+                android:padding="@dimen/margin5"
+                android:layout_marginEnd="@dimen/margin10"
+                android:backgroundTint="#DAD9D9">
+            </ImageView>
+        </LinearLayout>
+</LinearLayout>
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/view_color"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:layout_marginEnd="@dimen/margin10"-->
+<!--        android:layout_marginStart="@dimen/margin10"/>-->
+    </androidx.cardview.widget.CardView>

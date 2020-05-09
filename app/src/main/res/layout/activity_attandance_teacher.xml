@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.teacher.AttendanceActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/attandance_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color">
+
+        <ImageView
+            android:id="@+id/attendance_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/publish_black"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/text_size16"
+            android:visibility="gone"
+            android:gravity="center"
+            android:onClick="savePressed"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/attandence_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin10"
+        android:layout_marginEnd="@dimen/margin10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="@dimen/margin10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/margin5"
+                android:paddingEnd="@dimen/margin5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/st_class"
+                    android:textSize="@dimen/text_size16"
+                    android:textColor="@color/black"/>
+
+                <Spinner
+                    android:id="@+id/attendance_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:elevation="@dimen/margin5"
+                    android:background="@drawable/round_grey_background"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/margin5"
+                android:paddingEnd="@dimen/margin5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/div"
+                    android:textSize="@dimen/text_size16"
+                    android:textColor="@color/black"/>
+
+                <Spinner
+                    android:id="@+id/attendance_division"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:elevation="@dimen/margin5"
+                    android:background="@drawable/round_grey_background"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/margin5"
+                android:paddingEnd="@dimen/margin5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/period"
+                    android:textSize="@dimen/text_size16"
+                    android:textColor="@color/black"/>
+
+                <Spinner
+                    android:id="@+id/attendance_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:elevation="@dimen/margin5"
+                    android:background="@drawable/round_grey_background"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="@string/search"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size18"
+            android:layout_gravity="center"
+            android:padding="@dimen/margin10"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/round_button"
+            android:onClick="searchPresses"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/upload_attandance_student_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="3"
+        android:layout_marginStart="@dimen/margin10"
+        android:layout_marginEnd="@dimen/margin10"
+        tools:listitem="@layout/custom_attendance_card"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@color/white"/>
+</LinearLayout>

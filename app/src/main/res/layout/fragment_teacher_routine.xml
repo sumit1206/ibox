@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.teacher.teacher_schedule.TeacherRoutineFragment">
+
+    <include
+        layout="@layout/setup_teacher_toolbar"/>
+
+    <!-- days header -->
+    <LinearLayout
+        android:id="@+id/calendar_header"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/margin10"
+        android:layout_marginEnd="@dimen/margin10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/teacher_routine_day_sun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:background="@drawable/round_button"
+            android:textColor="#222222"
+            android:text="@string/sun"/>
+
+        <TextView
+            android:id="@+id/teacher_routine_day_mon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#222222"
+            android:padding="@dimen/margin3"
+            android:background="@drawable/round_button"
+            android:text="@string/mon"/>
+        <TextView
+            android:id="@+id/teacher_routine_day_tue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/margin3"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="@string/tue"/>
+
+        <TextView
+            android:id="@+id/teacher_routine_day_wed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/margin3"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="@string/wed"/>
+
+        <TextView
+            android:id="@+id/teacher_routine_day_thu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/margin3"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="@string/thu"/>
+
+        <TextView
+            android:id="@+id/teacher_routine_day_fri"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/margin3"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="@string/fri"/>
+
+        <TextView
+            android:id="@+id/teacher_routine_day_sat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/margin3"
+            android:gravity="center_horizontal"
+            android:textColor="#222222"
+            android:text="@string/sat"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/teacher_routine_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_marginTop="@dimen/margin10"
+        tools:itemCount="6"
+        tools:listitem="@layout/student_custom_routine_card"/>
+</LinearLayout>

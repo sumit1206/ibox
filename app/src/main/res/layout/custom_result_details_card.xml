@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/grey_border"
+    android:backgroundTint="#E6F0F3"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:background="@drawable/grey_border">
+
+        <TextView
+            android:id="@+id/subject_name_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Math"
+            android:gravity="start"
+            android:layout_weight="1"
+            android:textAllCaps="true"
+            android:paddingStart="@dimen/margin10"
+            android:paddingTop="@dimen/margin5"
+            android:paddingBottom="@dimen/margin5"
+            android:textSize="@dimen/text_size16"
+            android:textColor="@color/black">
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/total_marks_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="100"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/margin5"
+            android:textAllCaps="true"
+            android:paddingTop="@dimen/margin5"
+            android:paddingBottom="@dimen/margin5"
+            android:textSize="@dimen/text_size16"
+            android:background="@drawable/grey_border"
+            android:textColor="@color/black">
+        </TextView>
+
+        <TextView
+            android:id="@+id/obtained_marks_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="70"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:paddingTop="@dimen/margin5"
+            android:paddingBottom="@dimen/margin5"
+            android:padding="@dimen/margin5"
+            android:textSize="@dimen/text_size16"
+            android:background="@drawable/grey_border"
+            android:textColor="@color/black">
+        </TextView>
+        <TextView
+            android:id="@+id/grade_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="A"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/grey_border"
+            android:padding="@dimen/margin5"
+            android:textAllCaps="true"
+            android:paddingTop="@dimen/margin5"
+            android:paddingBottom="@dimen/margin5"
+            android:textSize="@dimen/text_size16"
+            android:textColor="@color/black">
+        </TextView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/margin10"
+    app:cardCornerRadius="@dimen/margin5">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/margin10"
+        android:elevation="@dimen/margin5">
+
+<!--        <View-->
+<!--            android:id="@+id/students_card_view_line"-->
+<!--            android:layout_width="@dimen/margin5"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@color/toolbar_color"/>-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/sender_thumbnail"
+            android:layout_width="@dimen/image60"
+            android:layout_height="@dimen/image60"
+            android:layout_marginStart="@dimen/margin5"
+            android:scaleType="centerCrop"
+            android:background="@drawable/avater" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:padding="@dimen/margin10"
+            android:paddingStart="@dimen/margin10"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sender_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/student_name"
+                android:textSize="@dimen/text_size18"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:paddingTop="@dimen/margin5"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/student_message"
+            android:layout_width="@dimen/margin30"
+            android:layout_height="@dimen/margin30"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin5"
+            android:backgroundTint="@color/text_light"
+            android:background="@drawable/arrow_right"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

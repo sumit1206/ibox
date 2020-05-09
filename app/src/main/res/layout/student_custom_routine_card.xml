@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="@color/white"
+    android:focusable="true">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/routine_time_student"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="10:00 AM"
+            android:gravity="center"
+            android:textSize="@dimen/text_size14"
+            android:paddingEnd="@dimen/margin10"
+            android:textColor="@color/text_light"
+            android:padding="@dimen/margin3"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/step_number_circle"
+                android:layout_width="@dimen/vertical_stepper_form_width_circle"
+                android:layout_height="@dimen/vertical_stepper_form_width_circle"
+                android:background="@drawable/circle_step_done">
+
+                <ImageView
+                    android:id="@+id/step_done_icon"
+                    android:layout_width="@dimen/vertical_stepper_form_width_circle"
+                    android:layout_height="@dimen/vertical_stepper_form_width_circle"
+                    android:background="@drawable/round_button"
+                    android:backgroundTint="@color/black"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center"
+                    tools:visibility="visible"/>
+            </FrameLayout>
+
+            <View
+                android:id="@+id/line_track"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="@color/grey" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin5"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/image40"
+                    android:layout_height="@dimen/image40"
+                    android:id="@+id/class_thumb_student_routine"
+                    android:background="@drawable/avater"
+                    android:textSize="12sp"
+                    tools:text="24 JAN"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/subject_name_routine_student"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="@dimen/margin10"
+                    android:textSize="@dimen/text_size16"
+                    tools:text="History"/>
+
+                <TextView
+                    android:id="@+id/teacher_name_student_routine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/text_size14"
+                    android:text="@string/teacher_name"
+                    android:textColor="@color/text_light"
+                    android:paddingBottom="@dimen/margin5"
+                    android:layout_marginStart="@dimen/margin10" />
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

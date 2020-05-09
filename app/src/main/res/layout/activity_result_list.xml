@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.student.result.ResultList">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/result_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color">
+    </androidx.appcompat.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/student_result_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="3"
+        tools:listitem="@layout/custom_result_card"
+        android:background="@color/white"/>
+
+</LinearLayout>

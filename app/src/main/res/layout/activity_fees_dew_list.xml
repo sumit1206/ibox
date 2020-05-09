@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.student.fees.FeesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fees_dew_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size18"
+                android:layout_marginEnd="@dimen/text_size16"
+                android:layout_gravity="end"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:onClick="payNowClick"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dew_fees_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="3"
+        tools:listitem="@layout/custom_fees_dew_card"
+        android:background="@color/white"/>
+
+</LinearLayout>

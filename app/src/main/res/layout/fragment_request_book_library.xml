@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.student.library.RequestBookLibrary">
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/margin10"
+            android:layout_marginEnd="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10">
+
+            <EditText
+                android:id="@+id/req_book_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image40"
+                android:hint="@string/search_for_a_book"
+                android:textSize="@dimen/text_size16"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/margin10"
+                android:background="@drawable/edit_text_bg">
+            </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/search"
+                android:gravity="center"
+                android:textColor="@color/toolbar_color"
+                android:paddingStart="@dimen/margin10"
+                android:paddingEnd="@dimen/margin10"
+                android:textSize="@dimen/text_size18">
+            </TextView>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/req_book_library_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="3"
+            android:layout_marginTop="@dimen/margin10"
+            tools:listitem="@layout/custom_library_card"/>
+
+    </LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/toolbar_color"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/fees_popup_breakup_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_color"/>
+
+        <ProgressBar
+            android:id="@+id/fees_popup_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/discount"
+                android:textColor="@color/black"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size16"/>
+
+
+            <TextView
+                android:id="@+id/fees_popup_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textSize="@dimen/text_size16"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_color"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:textColor="@color/black"
+                android:gravity="start"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size16"/>
+
+
+            <TextView
+                android:id="@+id/fees_popup_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textSize="@dimen/text_size16"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fees_popup_pay_now"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/margin50"
+            android:textSize="@dimen/text_size16"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_gravity="center"
+            android:text="@string/pay"
+            android:gravity="center"
+            android:background="@drawable/round_button"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/icon_color_syllabus"/>
+    </LinearLayout>
+</LinearLayout>

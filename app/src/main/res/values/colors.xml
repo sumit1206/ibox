@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00857E</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="edit_text_bg_color">#E7E4E4</color>
+    <color name="text_light">#716F6F</color>
+    <color name="icon_color_homework">#E91E63</color>
+    <color name="icon_color_fees">#FFEB3B</color>
+    <color name="icon_color_result">#009688</color>
+    <color name="icon_color_syllabus">#FF5722</color>
+    <color name="icon_color_track">#4CAF50</color>
+    <color name="icon_color_live">#FF9800</color>
+    <color name="icon_color_gallery">#0DF782</color>
+    <color name="icon_color_faq">#2196F3</color>
+    <color name="text_background">#E7E2E2</color>
+    <color name="view_color">#DAD5D5</color>
+    <color name="grey">#ECE6E6</color>
+    <!--light icon color-->
+    <color name="light_icon_color">#5E6062</color>
+
+    <color name="today">#4b82ff</color>
+    <color name="greyed_out">#c7c7c7</color>
+
+    <color name="summer">#44eebd82</color>
+    <color name="fall">#44d8d27e</color>
+    <color name="winter">#44a1c1da</color>
+    <color name="spring">#448da64b</color>
+    <color name="yellow">#6B331D</color>
+    <color name="red">#FC5951</color>
+    <color name="green">#89FA8F</color>
+    <color name="toolbar_color">#075E54</color>
+    <color name="blue">#77FFDE</color>
+    <color name="leave_taken_color">#FF3723</color>
+    <color name="pending_color">#FA6406</color>
+    <color name="fees">#FC4848</color>
+    <color name="light_edit_text_bg_color">#F3F0F0</color>
+
+
+    <item name="blue_r" type="color">#FF33B5E5</item>
+    <item name="purple" type="color">#FFAA66CC</item>
+    <item name="green_r" type="color">#FF99CC00</item>
+    <item name="orange" type="color">#FFFFBB33</item>
+    <item name="red_r" type="color">#FFFF4444</item>
+    <item name="darkblue" type="color">#FF0099CC</item>
+    <item name="darkpurple" type="color">#FF9933CC</item>
+    <item name="darkgreen" type="color">#FF669900</item>
+    <item name="darkorange" type="color">#FFFF8800</item>
+    <item name="darkred" type="color">#FFCC0000</item>
+
+    <integer-array name="androidcolors">
+        <item>@color/blue_r</item>
+        <item>@color/purple</item>
+        <item>@color/green_r</item>
+        <item>@color/orange</item>
+        <item>@color/red_r</item>
+        <item>@color/darkblue</item>
+        <item>@color/darkpurple</item>
+        <item>@color/darkgreen</item>
+        <item>@color/darkorange</item>
+        <item>@color/darkred</item>
+    </integer-array>
+
+</resources>

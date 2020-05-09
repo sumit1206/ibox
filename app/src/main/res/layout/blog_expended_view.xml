@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/blogUploaderThumb"
+                android:layout_width="@dimen/image40"
+                android:layout_height="@dimen/image40"
+                android:background="@drawable/avater"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/margin10">
+                <TextView
+                    android:id="@+id/blogUploaderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ibox"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size16"/>
+                <TextView
+                    android:id="@+id/blogUploadDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="20 JAN 2019"
+                    android:textColor="@color/text_light"
+                    android:textSize="@dimen/text_size12"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_margin="@dimen/margin5"
+            app:cardCornerRadius="@dimen/margin10">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/blogImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"/>
+            <TextView
+                android:id="@+id/blogTitleExpanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Happy Childrens's day"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:paddingStart="@dimen/margin10"
+                android:textColor="@color/white"
+                android:background="@drawable/gradient_bg"
+                android:backgroundTint="@color/black"
+                android:textSize="@dimen/text_size14"
+                android:paddingBottom="@dimen/margin10"
+                android:paddingTop="@dimen/margin10"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="bottom"
+                    android:backgroundTint="@color/view_color"/>
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
